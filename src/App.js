@@ -1,5 +1,17 @@
+import { useState } from "react";
+
 function App() {
-    return <div>Show animal list here</div>
+    const [count, setCount] = useState(0);
+
+    const handleclick = () => {
+       setCount(count+1);
+    };
+
+    return ( <div>
+        <button onClick={handleclick}>Add Animal</button>
+        <div>Number of animals:{count}</div>
+    </div>
+    );
 }
 
 export default App;
