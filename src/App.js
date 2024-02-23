@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from "react";
 import AnimalShow from "./AnimalShow";
 
@@ -18,9 +19,10 @@ function App() {
         return <AnimalShow type={animal} key={index}/>
     });
 
-    return ( <div>
+    return ( 
+    <div className='app'>
         <button onClick={handleclick}>Add Animal</button>
-        <div>{renderedAnimals}</div>
+        <div className='animal-list'>{renderedAnimals}</div>
     </div>
     );
 }
